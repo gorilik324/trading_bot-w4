@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  trading_bot:
+    build: .
+    volumes:
+      - ./trading_bot:/app/trading_bot
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+    ports:
+      - "8000:8000"
+  redis:
+    image: redis:alpine3.17
+    ports:
+      - "6379:6379"
+    command: redis-server

@@ -1,0 +1,5 @@
+ccxt==3.0.66
+python-dotenv==1.0.0
+websockets==11.0.1
+redis==4.5.4
+ujson==5.7.0
